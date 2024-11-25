@@ -1,3 +1,4 @@
+import { Banner } from "./components/Banner";
 import { NavbarDemo } from "./components/NavbarDemo";
 
 function App() {
@@ -16,6 +17,10 @@ function App() {
             Hire Me!
           </div>
         </button>
+      </div>
+      {/**Hero section */}
+      <div>
+        <Banner />
       </div>
     </div>
   );
