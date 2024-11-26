@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Banner } from "./components/Banner";
 import { NavbarDemo } from "./components/NavbarDemo";
 import Progress from "./components/Progress";
+import Services from "./components/Services";
 
 function App() {
   return (
@@ -18,8 +19,12 @@ function App() {
         <Banner />
       </div>
       {/**skill section */}
-      <div>
+      <div className="">
         <Progress />
+      </div>
+      {/**Services section */}
+      <div className="">
+        <Services />
       </div>
     </div>
   );

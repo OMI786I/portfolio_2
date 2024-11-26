@@ -44,7 +44,7 @@ export default function Progress() {
                 duration: 0.5,
                 ease: [0.4, 0.0, 0.2, 1],
               }}
-              className="relative z-10 text-xl md:text-5xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold "
+              className="relative z-10 text-2xl md:text-5xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold "
             >
               Here is what I am
               <Highlight className="text-black dark:text-white">
@@ -56,10 +56,10 @@ export default function Progress() {
 
         <div className=" flex-col justify-center items-center gap-4">
           {skills.map((res) => (
-            <div className="w-96">
+            <div className=" mx-auto ">
               <h1 className="text-lg font-semibold text-white">{res.title}</h1>
               <ProgressBar
-                width="400px"
+                width="350px"
                 height="10px"
                 rect
                 percentage={res.value}

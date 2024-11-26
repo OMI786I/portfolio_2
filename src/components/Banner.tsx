@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export function Banner() {
   return (
     <div className="h-[40rem] w-full  rounded-md bg-neutral-950 relative flex flex-col   justify-center antialiased">
-      <div className="flex flex-col md:flex-row items-center justify-center">
+      <div className="flex md:mt-60 flex-col md:flex-row items-center justify-center">
         {" "}
         <div className="max-w-2xl mt-16 md:mt-0  p-4">
           <h1 className=" relative z-10 text-2xl md:text-4xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600   font-sans font-bold ">
