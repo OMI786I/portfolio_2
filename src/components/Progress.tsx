@@ -28,8 +28,8 @@ const skills = [
 export default function Progress() {
   return (
     <>
-      <div className="flex justify-around items-center">
-        <div>
+      <div className="flex  flex-col md:flex-row  justify-around items-center">
+        <div className="h-96 -mt-36 md:h-full md:-mt-0">
           <HeroHighlight>
             <motion.h1
               initial={{
@@ -44,7 +44,7 @@ export default function Progress() {
                 duration: 0.5,
                 ease: [0.4, 0.0, 0.2, 1],
               }}
-              className="relative z-10 text-lg md:text-5xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold "
+              className="relative z-10 text-2xl md:text-5xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold "
             >
               Here is what I am
               <Highlight className="text-black dark:text-white">
@@ -52,7 +52,6 @@ export default function Progress() {
               </Highlight>
             </motion.h1>
           </HeroHighlight>
-          <p></p>
         </div>
 
         <div
