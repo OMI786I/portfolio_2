@@ -3,6 +3,7 @@ import { Banner } from "./components/Banner";
 import { NavbarDemo } from "./components/NavbarDemo";
 import Progress from "./components/Progress";
 import Services from "./components/Services";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
       {/**Services section */}
       <div className="">
         <Services />
+      </div>
+      {/**Projects section */}
+      <div className="">
+        <Projects />
       </div>
     </div>
   );
