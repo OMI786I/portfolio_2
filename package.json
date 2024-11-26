@@ -14,12 +14,14 @@
     "aos": "^3.0.0-beta.6",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.17",
+    "mini-svg-data-uri": "^1.4.4",
     "react": "^18.3.1",
     "react-animated-progress-bar": "^1.1.2",
     "react-dom": "^18.3.1",
     "react-element-to-jsx-string": "^15.0.0",
     "react-router-dom": "^7.0.1",
     "react-scroll-progress-bar": "^2.0.3",
+    "svg-data-uri": "^1.0.1",
     "tailwind-merge": "^2.5.5"
   },
   "devDependencies": {

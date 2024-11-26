@@ -1,4 +1,7 @@
 import ProgressBar from "react-animated-progress-bar";
+import { motion } from "framer-motion";
+import { HeroHighlight, Highlight } from "./ui/hero-highlight";
+
 const skills = [
   {
     title: "HTML & CSS",
@@ -25,37 +28,61 @@ const skills = [
 export default function Progress() {
   return (
     <>
-      <h1 className=" p-2 text-3xl lg:text-5xl text-center font-bold bg-gradient-to-r from-green-900 to-green-400 bg-clip-text text-transparent my-6">
-        Here is what I am good at
-      </h1>
-
-      <div
-        data-aos="fade-right"
-        className=" flex-col justify-center items-center gap-4"
-      >
-        {skills.map((res) => (
-          <div className="w-96">
-            <h1 className="text-lg font-semibold text-white">{res.title}</h1>
-            <ProgressBar
-              width="400px"
-              height="10px"
-              rect
-              percentage={res.value}
-              rectPadding="1px"
-              rectBorderRadius="20px"
-              trackPathColor="transparent"
-              bgColor="#333333"
-              trackBorderColor="#93B1A6"
-              fontColor="white"
-              defColor={{
-                fair: "#93B1A6",
-                good: "#93B1A6",
-                excellent: "#93B1A6",
-                poor: "#93B1A6",
+      <div className="flex justify-around items-center">
+        <div>
+          <HeroHighlight>
+            <motion.h1
+              initial={{
+                opacity: 0,
+                y: 20,
               }}
-            />
-          </div>
-        ))}
+              animate={{
+                opacity: 1,
+                y: [20, -5, 0],
+              }}
+              transition={{
+                duration: 0.5,
+                ease: [0.4, 0.0, 0.2, 1],
+              }}
+              className="relative z-10 text-lg md:text-5xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold "
+            >
+              Here is what I am
+              <Highlight className="text-black dark:text-white">
+                Good at
+              </Highlight>
+            </motion.h1>
+          </HeroHighlight>
+          <p></p>
+        </div>
+
+        <div
+          data-aos="fade-right"
+          className=" flex-col justify-center items-center gap-4"
+        >
+          {skills.map((res) => (
+            <div className="w-96">
+              <h1 className="text-lg font-semibold text-white">{res.title}</h1>
+              <ProgressBar
+                width="400px"
+                height="10px"
+                rect
+                percentage={res.value}
+                rectPadding="1px"
+                rectBorderRadius="20px"
+                trackPathColor="transparent"
+                bgColor="#333333"
+                trackBorderColor="#93B1A6"
+                fontColor="white"
+                defColor={{
+                  fair: "#93B1A6",
+                  good: "#93B1A6",
+                  excellent: "#93B1A6",
+                  poor: "#93B1A6",
+                }}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
