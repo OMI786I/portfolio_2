@@ -28,7 +28,7 @@ const skills = [
 export default function Progress() {
   return (
     <>
-      <div className="flex  flex-col md:flex-row  justify-around items-center">
+      <div className="flex  flex-col md:flex-row justify-center md:justify-around items-center ">
         <div className="h-96 -mt-36 md:h-full md:-mt-0">
           <HeroHighlight>
             <motion.h1
@@ -44,7 +44,7 @@ export default function Progress() {
                 duration: 0.5,
                 ease: [0.4, 0.0, 0.2, 1],
               }}
-              className="relative z-10 text-2xl md:text-5xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold "
+              className="relative z-10 text-xl md:text-5xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold "
             >
               Here is what I am
               <Highlight className="text-black dark:text-white">
@@ -54,10 +54,7 @@ export default function Progress() {
           </HeroHighlight>
         </div>
 
-        <div
-          data-aos="fade-right"
-          className=" flex-col justify-center items-center gap-4"
-        >
+        <div className=" flex-col justify-center items-center gap-4">
           {skills.map((res) => (
             <div className="w-96">
               <h1 className="text-lg font-semibold text-white">{res.title}</h1>

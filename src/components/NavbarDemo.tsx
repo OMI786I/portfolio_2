@@ -65,6 +65,12 @@ function Navbar({ className }: { className?: string }) {
             <HoveredLink href="/enterprise">Enterprise</HoveredLink>
           </div>
         </MenuItem>
+
+        <MenuItem
+          setActive={setActive}
+          active={active}
+          item="Hire Me"
+        ></MenuItem>
       </Menu>
     </div>
   );
