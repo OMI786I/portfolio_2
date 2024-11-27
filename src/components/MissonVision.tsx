@@ -82,11 +82,11 @@ const MissionVision = () => {
                   </svg>
                 </div>
 
-                <h1 className="font-bold text-3xl text-white mb-4 relative z-50">
+                <h1 className="font-bold text-3xl text-white mb-4 relative z-10">
                   {res.title}
                 </h1>
 
-                <p className="font-normal text-xl text-slate-500 mb-4 relative z-50">
+                <p className="font-normal text-xl text-slate-500 mb-4 relative z-10">
                   {res.description}
                 </p>
 

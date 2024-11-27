@@ -19,6 +19,8 @@
     "react-animated-progress-bar": "^1.1.2",
     "react-dom": "^18.3.1",
     "react-element-to-jsx-string": "^15.0.0",
+    "react-hook-form": "^7.53.2",
+    "react-multi-carousel": "^2.8.5",
     "react-router-dom": "^7.0.1",
     "react-scroll-progress-bar": "^2.0.3",
     "svg-data-uri": "^1.0.1",

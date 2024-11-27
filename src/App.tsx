@@ -5,6 +5,7 @@ import Progress from "./components/Progress";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
 import MissionVision from "./components/MissonVision";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -35,6 +36,10 @@ function App() {
       {/**Mission & Vision section */}
       <div className="">
         <MissionVision />
+      </div>
+      {/**Contacts section */}
+      <div className="">
+        <Contact />
       </div>
     </div>
   );
