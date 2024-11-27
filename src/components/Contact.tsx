@@ -12,11 +12,7 @@ type Inputs = {
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null); // Properly initialize the form reference
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<Inputs>();
+  const { register, handleSubmit } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     if (form.current) {

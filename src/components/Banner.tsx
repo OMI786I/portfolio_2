@@ -1,5 +1,3 @@
-"use client";
-import React from "react";
 import { BackgroundBeams } from "./ui/background-beams";
 import { GlareImage } from "./GlareImage";
 import { Link } from "react-router-dom";

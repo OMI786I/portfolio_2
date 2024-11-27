@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Banner } from "./components/Banner";
 import { NavbarDemo } from "./components/NavbarDemo";
 import Progress from "./components/Progress";
