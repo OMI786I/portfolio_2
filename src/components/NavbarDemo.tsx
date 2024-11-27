@@ -35,6 +35,19 @@ function Navbar({ className }: { className?: string }) {
             item="Services"
           ></MenuItem>
         </Link>
+        <Link
+          to="techSection"
+          smooth={true}
+          duration={500}
+          className="cursor-pointer"
+        >
+          {" "}
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item="Skills"
+          ></MenuItem>
+        </Link>
 
         <Link
           to="projectsSection"

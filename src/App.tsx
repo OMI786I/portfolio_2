@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import MissionVision from "./components/MissonVision";
 import Contact from "./components/Contact";
 import { Toaster } from "react-hot-toast";
+import { Technologies } from "./components/Technologies";
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
       {/**skill section */}
       <div id="skillSection" className="">
         <Progress />
+      </div>
+      {/**Technology  section */}
+      <div id="techSection" className="">
+        <Technologies />
       </div>
       {/**Services section */}
       <div id="servicesSection" className="">

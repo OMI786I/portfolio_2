@@ -13,7 +13,7 @@ const skills = [
   },
   {
     title: "React",
-    value: "70",
+    value: "80",
   },
   {
     title: "Node",
@@ -21,7 +21,7 @@ const skills = [
   },
   {
     title: "Express",
-    value: "68",
+    value: "75",
   },
 ];
 
