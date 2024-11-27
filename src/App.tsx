@@ -24,23 +24,23 @@ function App() {
         <Banner />
       </div>
       {/**skill section */}
-      <div className="">
+      <div id="skillSection" className="">
         <Progress />
       </div>
       {/**Services section */}
-      <div className="">
+      <div id="servicesSection" className="">
         <Services />
       </div>
       {/**Projects section */}
-      <div className="">
+      <div id="projectsSection" className="">
         <Projects />
       </div>
       {/**Mission & Vision section */}
-      <div className="">
+      <div id="missionVisionSection" className="">
         <MissionVision />
       </div>
       {/**Contacts section */}
-      <div className="">
+      <div id="contactsSection" className="">
         <Contact />
       </div>
     </div>
