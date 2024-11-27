@@ -1,5 +1,4 @@
 import { BackgroundGradient } from "./ui/background-gradient";
-import { Button } from "./ui/moving-border";
 
 const tech = [
   {
