@@ -1,18 +1,49 @@
+import { useForm, SubmitHandler } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+import toast from "react-hot-toast";
+
 type Inputs = {
   name: string;
   email: string;
   phone: number;
   message: string;
 };
-import { useForm, SubmitHandler } from "react-hook-form";
+
 export default function Contact() {
+  const form = useRef<HTMLFormElement>(null); // Properly initialize the form reference
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "service_9y4ru6v",
+          "template_8mwg81s",
+          form.current,
+          "VH0F4qb6yN0rYJZYq" // Correct public key placement
+        )
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            toast.success("Thank you for contacting me!", {
+              position: "bottom-right",
+            });
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+    } else {
+      console.error("Form reference is not available.");
+    }
+
+    console.log(data);
+  };
 
   return (
     <section className="py-24">
@@ -90,7 +121,7 @@ export default function Contact() {
                         />
                       </svg>
                       <h5 className="text-black text-base font-normal leading-6 ml-5">
-                        Azimpur Dhaka, Bangladesh
+                        Azimpur, Dhaka Bangladesh
                       </h5>
                     </a>
                   </div>
@@ -98,14 +129,14 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form ref={form} onSubmit={handleSubmit(onSubmit)}>
             <div className="bg-[#93B1A6] text-white p-5 lg:p-11 lg:rounded-r-2xl rounded-2xl">
               <h2 className="text-white font-manrope text-4xl font-semibold leading-10 mb-11">
                 Send Me A Message
               </h2>
               <input
                 type="text"
-                className="w-full h-12 text-gray-100 placeholder-gray-100  shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-10"
+                className="w-full h-12 text-gray-100 placeholder-gray-100 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-10"
                 placeholder="Name"
                 {...register("name", { required: true })}
               />
@@ -119,7 +150,7 @@ export default function Contact() {
                 type="number"
                 className="w-full h-12 text-gray-100 placeholder-gray-100 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-10"
                 placeholder="Phone"
-                {...register("phone", { required: true })}
+                {...register("phone")}
               />
 
               <textarea

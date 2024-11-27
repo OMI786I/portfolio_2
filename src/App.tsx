@@ -6,10 +6,12 @@ import Services from "./components/Services";
 import Projects from "./components/Projects";
 import MissionVision from "./components/MissonVision";
 import Contact from "./components/Contact";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <div className="bg-[#040D12] min-h-screen">
+      <Toaster />
       {/**navbar */}
       <div className=" flex  ">
         <div className=" w-full">
