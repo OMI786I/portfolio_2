@@ -4,6 +4,7 @@ import { NavbarDemo } from "./components/NavbarDemo";
 import Progress from "./components/Progress";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
+import MissionVision from "./components/MissonVision";
 
 function App() {
   return (
@@ -30,6 +31,10 @@ function App() {
       {/**Projects section */}
       <div className="">
         <Projects />
+      </div>
+      {/**Mission & Vision section */}
+      <div className="">
+        <MissionVision />
       </div>
     </div>
   );
