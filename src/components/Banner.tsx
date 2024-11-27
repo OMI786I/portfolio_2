@@ -1,9 +1,10 @@
-import { BackgroundBeams } from "./ui/background-beams";
+import { BackgroundLines } from "./ui/background-lines";
 import { GlareImage } from "./GlareImage";
 import { Link } from "react-router-dom";
+
 export function Banner() {
   return (
-    <div className="h-[40rem] w-full  rounded-md bg-neutral-950 relative flex flex-col   justify-center antialiased">
+    <BackgroundLines className="h-[40rem] w-full  rounded-md  relative flex flex-col   justify-center antialiased">
       <div className="flex md:mt-60 flex-col md:flex-row items-center justify-center">
         {" "}
         <div className="max-w-2xl mt-16 md:mt-0  p-4">
@@ -104,7 +105,6 @@ export function Banner() {
           </Link>
         </div>
       </div>
-      <BackgroundBeams className="" />
-    </div>
+    </BackgroundLines>
   );
 }
